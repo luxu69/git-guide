@@ -8,8 +8,20 @@
 <li>Remote：远程仓库</li>
 </ul>
 
+## 目录 ##
+* 一、[新建代码库]（#new）
+* 二、[配置](#config)
+* 三、[添加/删除文件](#add)
+* 四、[代码提交](#commit)
+* 五、[分支](#branch)
+* 六、[标签](#tag)
+* 七、[查看信息](#show)
+* 八、[远程同步](#remote)
+* 九、[撤销](#cancel)
+* 十、[其他](#qita)
 
-一、新建代码库
+
+## 一、<a name="new">&sect; 新建代码库</a> ##
 
 * 在当前目录新建一个Git代码库
 $ git init
@@ -19,7 +31,10 @@ $ git init [project-name]
 
 * 下载一个项目和它的整个代码历史
 $ git clone [url]
-二、配置
+
+***
+
+## 二、<a name="config">&sect; 配置</a> ##
 
 Git的设置文件为.gitconfig，它可以在用户住目录下（全局配置），也可以在项目目录下（项目配置）
 
@@ -32,7 +47,8 @@ $ git config -e [--global]
 * 设置提交代码时的用户信息
 $ git config [--global] user.name "[name]"
 $ git config [--global] user.email "[email address]"
-三、增加/删除文件
+
+## 三、<a name="add">&sect; 增加/删除文件</a> ##
 
 * 添加指定文件到暂存区
 $ git add [file1] [file2] ...
@@ -55,7 +71,8 @@ $ git rm --cached [file]
 
 * 改名文件，并且将这个改名放入暂存区
 $ git mv [file-original] [file-renamed]
-四、代码提交
+
+## 四、<a name="commit">&sect; 代码提交</a> ##
 
 * 提交暂存区到仓库区
 $ git commit -m [message]
@@ -75,7 +92,8 @@ $ git commit --amend -m [message]
 
 * 重做上一次commit，并包括指定文件的新变化
 $ git commit --amend [file1] [file2] ...
-五、分支
+
+## 五、<a name="branch">&sect; 分支</a> ##
 
 * 列出所有本地分支
 $ git branch
@@ -119,7 +137,8 @@ $ git branch -d [branch-name]
 * 删除远程分支
 $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
-六、标签
+
+## 六、<a name="tag">&sect; 标签</a> ##
 
 * 列出所有tag
 $ git tag
@@ -147,7 +166,8 @@ $ git push [remote] --tags
 
 * 新建一个分支，指向某个tag
 $ git checkout -b [branch] [tag]
-七、查看信息
+
+## 七、<a name="show">&sect; 查看信息</a> ##
 
 * 显示有变更的文件
 $ git status
@@ -209,7 +229,7 @@ $ git show [commit]:[filename]
 
 * 显示当前分支的最近几次提交
 $ git reflog
-八、远程同步
+## 八、<a name="remote">&sect; 远程同步</a> ##
 
 * 下载远程仓库的所有变动
 $ git fetch [remote]
@@ -222,7 +242,7 @@ $ git remote show [remote]
 
 * 增加一个新的远程仓库，并命名 
 $ git remote add [shortname] [url]
-eg: git remote add origin https://git.coding.net/ghycn/ghycn.coding.com.git
+eg: git remote add origin http://github.com/luxu69/git-guide.git
 
 * 取回远程仓库的变化，并与本地分支合并
 $ git pull [remote] [branch]
@@ -235,7 +255,8 @@ $ git push [remote] --force
 
 * 推送所有分支到远程仓库
 $ git push [remote] --all
-九、撤销
+
+## 九、<a name="cancel">&sect; 撤销</a> ##
 
 * 恢复暂存区的指定文件到工作区
 $ git checkout [file]
@@ -268,7 +289,8 @@ $ git revert [commit]
 * 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
-十、其他
+
+## 十、<a name="qita">&sect; 其他</a> ##
 
 #生成一个可供发布的压缩包
 $ git archive
