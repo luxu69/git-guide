@@ -441,7 +441,7 @@ $ git remote show [remote]
 
 # 增加一个新的远程仓库，并命名 
 $ git remote add [shortname] [url]
-eg: git remote add origin https://git.coding.net/ghycn/ghycn.coding.com.git
+eg: git remote add origin https://github.com/luxu69/git-guide.git
 
 # 取回远程仓库的变化，并与本地分支合并
 $ git pull [remote] [branch]
